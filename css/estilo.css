@@ -3,16 +3,17 @@
 :root[data-theme="dark"] {
 
     /*--cor-texto-primario: #f0f0f0;*/
-    --primary-bg: #222324; /*bg=background*/
+    --primary-bg: #0c2536; /*bg=background*/
     --primary-color:#fff; /*texto*/
     --hover-menu:#94d7f1e7;
     --icon-color:#94d7f1e7;
+    --icon-tema: #ffc400;
 }
 
 
 :root[data-theme="light"] {
     --primary-bg: #fff; /*bg=background*/
-    --primary-color: #0e0c0c; /*texto*/
+    --primary-color: #0c2536; /*texto*/
     
 }
 
@@ -29,8 +30,8 @@ body{
 
 
 a {
-    text-decoration: double;
-    color: var(--primary-bg)
+    text-decoration:none;
+    color: var(--icone-tema);
 
 }
 
@@ -42,12 +43,109 @@ i {
     color: var(--icon-color);
 }
 
+
+/* reset*/
 *{
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+    list-style:none
 }
 
-img{
-    width: 10rem;
-    height: 10rem;
+
+/*fim do reset */
+
+
+
+
+/*--header--*/
+
+#header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0.25rem 1rem;
+    z-index: 2;
 }
+/*-- .header-logo .logo --*/
+
+.logo{
+    width: 3.25rem; /*largura*/
+    height: 3.25;  /*altura*/
+
+}
+
+.header-toggle{
+    display: flex;
+    justify-content: flex-end;
+}
+
+/*area do icone toggle*/
+#toggleTheme {
+    color: #f7d307;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    gap: 1rem;
+}
+
+
+.menu-item {
+    width: 100%;
+
+
+}
+/*
+.menu-link{
+    display: flex;
+    align-items: center;
+    gap: .0.5rem;
+}*/
+
+.header-nav{
+    display: none;
+
+}
+
+/*menu mobile*/
+
+.menu-mobile{
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid #173950;
+}
+
+.menu-mobile .menu.link{
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+
+}
+
+/*responsividade*/
+
+@media (min-width: 768px) {
+    #header{
+      position: fixed;
+      padding: 1rem 6rem;
+
+    }
+    .nav-mobile{
+        display: none;
+
+    }
+    .header-nav{
+        display: flex;
+    }
+}
+
+

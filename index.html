@@ -16,8 +16,12 @@
 <body>
 
     <header id="header">
-        <nav class="header-nav"> <!--nav = navegation-->
-            <ul class=" menu menu-principal">
+    
+        
+        <!--nav = navegation-->
+        <nav class="header-nav"> 
+
+            <ul class="menu menu-principal"> <!--menu desk-->
                 <li class="menu-item">
                     <a href="menu-link">
                         <span class="menu-text"> Home
@@ -60,19 +64,54 @@
 
         <div class="header-logo">
             <a href="#home">
-                <img src="img/logo.png" alt="">
+                <img class="logo" src="img/logo.png" alt="">
             </a>
 
         </div>
 
         <div class="header-toggle">
-            <i class="bi bi-sun"></i>
+            <i id="toggleTheme" class="bi bi-sun"></i>
         </div>
     
     </header> 
     <!--fim da header-->
     <!-- Shift + ALT + A  = seleciornar tudo e comentar -->
 
+
+    <nav class="nav-mobile">
+        <ul class="menu menu-mobile">
+
+            <li class="menu-item">
+                <a href="" class="menu-link active">
+                    <i class="bi bi-house-door"></i>
+                    <span class="menu-text"> Home </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="" class="menu-link active">
+                    <i class="bi bi-stack"></i>
+                    <span class="menu-text"> Projetos </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="" class="menu-link active">
+                    <i class="bi bi-person"></i>
+                    <span class="menu-text"> Sobre </span>
+                </a>
+            </li>
+
+            <li class="menu-item">
+                <a href="" class="menu-link active">
+                    <i class="bi bi-envelope"></i>
+                    <span class="menu-text"> Contato </span>
+                </a>
+            </li>
+
+        </ul>
+    </nav>
 </body>
+
 
 </html>
