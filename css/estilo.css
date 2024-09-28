@@ -3,22 +3,33 @@
     --primary-color: #ebebeb;
     --primary-bg: #1d1d1d;
     --hover-menu: #898989;
-    --icon-color: #169adc;
-    --icone-tema: #d7b21e;
+    --icon-color: #a8ecf5;
+    --icone-tema: #a8ecf5;
+    --menu-texto: #e1f7fa;
 }
 
 :root[data-theme="light"] {
     --primary-color: #1d1d1d;
     --primary-bg: #ebebeb;
     --hover-menu: #898989;
+    --menu-texto:#1d1d1d;
+
 
 }
+
+
+/*css geral*/
 
 body{
     background: var(--primary-bg);  /* fundo */
     color: var(--primary-color);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 22px; 
+}
+
+
+html[data-theme="light"] .logo {
+    filter: invert(5);
 }
 
 a{
@@ -32,6 +43,24 @@ a:hover{
 
 i {
   color: var(--icon-color);
+}
+
+b {
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 200;
+}
+
+
+p, span, li {
+    font-size: 1rem;
+}
+
+p {
+    text-align: justify;
 }
 
 /* Reset CSS  */
@@ -54,6 +83,7 @@ i {
     width: 100%;
     padding: 0.5rem 1rem;
     z-index: 2;
+    background: var(--primary-bg);
 }
 
 /* .header-logo .logo */
@@ -84,11 +114,11 @@ i {
     width: 100%;
 }
 
-/* .menu-link {
+.menu-link {
     display: flex;
     align-items: center;
     gap: .5rem; 
-} */
+} 
 
 .header-nav {
     display: none;
@@ -102,7 +132,8 @@ i {
     position: fixed;
     bottom: 0;
     justify-content: space-between;
-    border-top: 1px solid red;
+    border-top: 1px solid #a8ecf5;
+    ;
 }
 
 .menu-mobile .menu-link {
@@ -110,6 +141,111 @@ i {
     justify-content: center;
     padding: 0.5rem 1rem;
 }
+
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+    color: #a8ecf5; /* --cor do link--*/
+
+}
+
+.menu-icon, .menu-text {
+    color: var(--menu-texto);
+    font-weight: 600;
+
+}
+
+.menu-icon{
+    color: #ebebeb;
+    font-size: 1.5rem;
+}
+
+.menu-text{
+    font-size: .75rem;
+    text-transform: uppercase;
+}
+
+
+.menu-principal{
+    gap: 2rem;
+}
+
+.menu-social{
+    gap: 2rem;
+}
+
+.menu-social .menu-icon{
+color: #ffffff;
+}
+
+.menu-social .menu-icon:hover{
+    color: #a8ecf5;
+    }
+
+
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    border:none;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    transition: ease-in-out 0.3s;
+}
+
+.btn span, .btn i {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+
+.btn-primary span {
+    color: var(--primary-color);
+
+}
+
+.btn-primary{
+    border: 1px solid cornsilk;
+}
+
+
+/*-- Main --*/
+
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+
+}
+
+.video iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+#home, .projetos, .sobre, .contato {
+    padding: 5rem 10rem;
+}
+
+
 
 /* Responsividade 
 Responsivo
@@ -126,6 +262,27 @@ Responsivo
     .header-nav{
         display: flex;
     }
+
+    .header-nav
+    .header-toggle {
+    min-width: 30%;
+    }
+
+    h1 {
+        font-size:5rem;
+     }
+
+     h2 {
+        font-size:
+     }
+
+     h3 {
+        font-size:
+     }
+
+     #home, .projetos, .sobre {
+        padding: 8rem 6rem 4rem 6rem;
+     }
 }
 
 /*#home {
